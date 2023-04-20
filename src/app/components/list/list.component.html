@@ -23,5 +23,5 @@
   <div class ="no-inventario"*ngIf="datos.length == 0">
     <h5>No hay elementos para mostrar</h5>
   </div>
-  <!--<app-paginacion [items]= "datos" [totalPaginas]="totalPages" [nombreListado]="listName" (changePage)="cambiarPagina($event)"></app-paginacion>-->
+  <app-paginacion [items]= "datos" [totalPaginas]="totalPages" [nombreListado]="listName" (changePage)="cambiarPagina($event)"></app-paginacion>
 </div>

@@ -4,8 +4,9 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { VerPokemonComponent } from './components/ver-pokemon/ver-pokemon.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
-    // route => /home/language
+    // route => /home
     path: 'home',
     component: MainPageComponent,
   },
@@ -13,12 +14,11 @@ const routes: Routes = [
     //pokemon/ver/bulbasur
     path: 'pokemon/ver/:name',
     component: VerPokemonComponent,
-
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

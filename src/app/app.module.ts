@@ -15,6 +15,7 @@ import { ListComponent } from './components/list/list.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { VerPokemonComponent } from './components/ver-pokemon/ver-pokemon.component';
 import { RouterModule } from '@angular/router';
+import { PaginacionComponent } from './components/paginacion/paginacion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     SearchComponent,
     ListComponent,
     PokemonListComponent,
-    VerPokemonComponent
+    VerPokemonComponent,
+    PaginacionComponent
   ],
   imports: [
     BrowserModule,

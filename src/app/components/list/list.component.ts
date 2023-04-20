@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
 
   pageNumber = 1;
   loading = true;
-  img = 'assets/loading-yellow2.gif';
+  //img = 'assets/loading-yellow2.gif';
 
   constructor() { }
 
