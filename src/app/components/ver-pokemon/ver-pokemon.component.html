@@ -1,0 +1,18 @@
+<div class="dataInventarioContainer" *ngIf="pokemon !== undefined">
+  <div id="pokemonImage" *ngIf="pokemon !== undefined ">
+    <img src="{{pokemon.sprites.front_default}}" width="100" height="100">
+  </div>
+  <h5 *ngIf="pokemon.name">Nombre: {{pokemon.name}}</h5>
+  <h5 *ngIf="pokemon.id">Id pokemon: {{pokemon.id}}</h5>
+  <h5>Tipos:</h5>
+  <ul *ngFor= "let type of pokemon.types ">
+    <li>{{ type.type.name }}</li>
+  </ul>
+
+</div>
+
+
+
+<div *ngIf="pokemon === undefined ">
+  <h5>No se encuentra el pokemon con el nombre: {{name}}</h5>
+</div>

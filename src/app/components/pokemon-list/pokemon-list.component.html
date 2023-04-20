@@ -1,0 +1,13 @@
+
+<div class="listado-container">
+
+
+  <div>
+    <app-list [datos]="listPokemon"
+      [configuracion]="configuracionListPokemon"
+      [totalPages]="paginasTotales" [listName]="nombreListado"
+      (changePage)="cambiarPagina($event)"></app-list>
+  </div>
+
+
+</div>

@@ -1,0 +1,27 @@
+<div class="table-responsive">
+  <table class="table" *ngIf='datos.length > 0'>
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let item of configuracion">{{item.nombreColumna}}</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fila of datos">
+        <ng-container *ngFor="let item of configuracion">
+          <td *ngIf="item.tipo == 'Enlace'"><a [routerLink]="[item.link,
+              fila[item.parametro]]">{{fila.name}}</a></td>
+          <td *ngIf="item.tipo == 'Dato'">{{fila[item.campo]}}</td>
+          <td *ngIf="item.tipo == 'Boton Ver'" style="width: 10%"><button
+              [routerLink]="[item.link + fila[item.parametro]]"
+              class={{item.clase}}>Ver</button></td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class ="no-inventario"*ngIf="datos.length == 0">
+    <h5>No hay elementos para mostrar</h5>
+  </div>
+  <!--<app-paginacion [items]= "datos" [totalPaginas]="totalPages" [nombreListado]="listName" (changePage)="cambiarPagina($event)"></app-paginacion>-->
+</div>

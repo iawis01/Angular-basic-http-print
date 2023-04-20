@@ -1,0 +1,11 @@
+<mat-form-field class="buscador-mat-form-field">
+  <input matInput
+    class="input"
+    color="accent"
+    type="text"
+    name="searchNombreEquipo"
+    [(ngModel)]="searchString"
+    (keyup)="filterData()"
+    placeholder="Busca por NombreEquipo o EmailUsuario">
+    <mat-icon matPrefix>search</mat-icon>
+</mat-form-field>
